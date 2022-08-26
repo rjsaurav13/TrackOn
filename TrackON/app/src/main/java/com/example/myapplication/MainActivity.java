@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Animation topAnim;
     Animation bottomAnim;
     ImageView image;
-    TextView growchat;
+    TextView trackon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
         topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim= AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
         image=findViewById(R.id.image);
-        growchat=findViewById(R.id.Head);
+        trackon=findViewById(R.id.Head);
 
 
         image.setAnimation(topAnim);
         image.setAnimation(bottomAnim);
 
-        growchat.setAnimation(topAnim);
-        growchat.setAnimation(bottomAnim);
+        trackon.setAnimation(topAnim);
+        trackon.setAnimation(bottomAnim);
 
 
         new Handler().postDelayed(new Runnable() {
