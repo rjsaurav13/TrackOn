@@ -51,7 +51,7 @@ SoftwareSerial SerialAT(2, 3);  // RX, TX
 // #define TINY_GSM_YIELD() { delay(2); }
 
 /*
- * Tests enabled
+  Tests enabled
  */
 #define TINY_GSM_TEST_GPRS true
 #define TINY_GSM_TEST_WIFI false
@@ -118,9 +118,9 @@ void setup() {
   SerialMon.begin(115200);
   delay(10);
 
-  // !!!!!!!!!!!
+  
   // Set your reset, enable, power pins here
-  // !!!!!!!!!!!
+  
 
   DBG("Wait...");
   delay(6000);
