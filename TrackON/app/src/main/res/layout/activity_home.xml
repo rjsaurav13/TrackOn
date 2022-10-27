@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/login" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/reg"
         android:layout_width="233dp"
         android:layout_height="213dp"
         android:layout_marginTop="378dp"
