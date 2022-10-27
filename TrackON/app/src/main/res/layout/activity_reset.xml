@@ -12,68 +12,68 @@
         android:id="@+id/textView4"
         android:layout_width="250dp"
         android:layout_height="37dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="363dp"
         android:layout_marginEnd="81dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="331dp"
         android:text="Enter the registered email id "
         android:textAlignment="center"
         android:textColor="#5E3023"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="298dp"
         android:layout_height="320dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="383dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/forgot" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="265dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="85dp"
         android:layout_height="32dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="5dp"
-        android:text="E-mail:"
-        android:textAlignment="viewStart"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="434dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="265dp"
+        android:text="E-mail:-"
+        android:textAlignment="viewEnd"
         android:textColor="#5E3023"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -106,34 +106,22 @@
         app:srcCompat="@drawable/to" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="631dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="81dp"
+        android:text="Have account! Login"
         android:textColor="#5E3023"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="6dp"
-        android:text="Dont Have account? "
-        android:textColor="#5E3023"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
