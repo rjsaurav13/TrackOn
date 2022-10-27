@@ -127,7 +127,7 @@
         android:layout_marginTop="628dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="84dp"
-        android:text="Dont Have account?  Register"
+        android:text="Forgot Passowrd! Reset Password"
         android:textColor="#5E3023"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
