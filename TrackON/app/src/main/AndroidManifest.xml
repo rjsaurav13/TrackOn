@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".track"
+            android:exported="false" />
+        <activity
             android:name=".Reset"
             android:exported="false" />
         <activity
