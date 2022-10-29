@@ -3,10 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bg"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
 
     tools:context=".Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+
+        tools:context=".Home">
+
+        <Button
+            android:id="@+id/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="483dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="200dp"
+            android:text="Register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="483dp"
+            android:layout_marginEnd="262dp"
+            android:layout_marginBottom="200dp"
+            android:text="Sign IN"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/image"
+            android:layout_width="331dp"
+            android:layout_height="208dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="524dp"
+            android:background="#fff"
+            android:src="@drawable/hgif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingClass" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="333dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/andada"
+            android:text="Namaskara NMAMIT join to know about bus location"
+            android:textAlignment="center"
+            android:textColor="#5E3023"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/image"
@@ -24,30 +95,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingClass" />
 
-    <ImageView
-        android:id="@+id/log"
-        android:layout_width="235dp"
-        android:layout_height="212dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="379dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login" />
-
-    <ImageView
-        android:id="@+id/reg"
-        android:layout_width="233dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="378dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/register" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="333dp"
@@ -55,14 +102,12 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="28dp"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="@font/andada"
         android:text="Namaskara NMAMIT join to know about bus location"
         android:textAlignment="center"
         android:textColor="#5E3023"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,11 +117,11 @@
         android:id="@+id/imageView7"
         android:layout_width="222dp"
         android:layout_height="234dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="598dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/log"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/to" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
