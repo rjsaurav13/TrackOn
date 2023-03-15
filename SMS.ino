@@ -23,7 +23,7 @@ SoftwareSerial SerialAT(2, 3);  // RX, TX
 
 #define GSM_PIN ""
 
-const char apn[]      = "apn";
+const char apn[]      = "airtelgprs.com";
 const char gprsUser[] = "";
 const char gprsPass[] = "";
 
