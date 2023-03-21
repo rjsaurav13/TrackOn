@@ -96,7 +96,7 @@ void loop()
   modem.enableGPS();
   float lat,  lon;
   while (1) {
-    if (modem.getGPSraw(&lat, &lon)) {
+    if (modem.getGPS(&lat, &lon)) {
       Serial.printf("lat:%f lon:%f\n", lat, lon);
       break;
     } else {
