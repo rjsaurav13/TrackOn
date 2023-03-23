@@ -87,13 +87,7 @@ void loop()
   delay(500);
   Serial.println("Modem Info: " + modemInfo);
 
-  Serial.println("\n---Starting GPS TEST---\n");
-  
-  modem.sendAT("+SGPIO=0,4,1,1");
-  if (modem.waitResponse(10000L) != 1) {
-    DBG(" SGPIO=0,4,1,1 false ");
-  }
-  modem.enableGPS();
+modem.enableGPS();
   float lat,  lon;
   while (1) {
     if (modem.getGPS(&lat, &lon)) {
