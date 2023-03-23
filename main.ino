@@ -102,6 +102,7 @@ modem.enableGPS();
   modem.disableGPS();
 
   modem.sendSMS(SMS_TARGET, String("https://www.google.com/maps/@") + lat + String(",") + lon);
+  DBG("SMS:", res ? "OK" : "fail");
 
   while (true) {
   modem.maintain();
