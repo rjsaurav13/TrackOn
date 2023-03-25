@@ -115,10 +115,8 @@ void loop()
   float lat, lon;
   while (1)
   {
-    if (modem.getGPS(&lat, &lon))
-    {
-      sendCoords(lat, lon);
-    }
+    (modem.getGPS(&lat, &lon);
+    
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
     delay(7500);
   }
