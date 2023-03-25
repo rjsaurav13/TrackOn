@@ -43,6 +43,29 @@ TinyGsm modem(SerialAT);
 int counter, lastIndex, numberOfPieces = 24;
 String pieces[24], input;
 
+void enableGPS(void)
+{
+
+  Serial.println("Start positioning . Make sure to locate outdoors.");
+  Serial.println("The blue indicator light flashes to indicate positioning.");
+  modem.sendAT("+SGPIO=0,4,1,1");
+  if (modem.waitResponse(10000L) != 1)
+  {
+    DBG(" SGPIO=0,4,1,1 false ");
+  }
+  modem.enableGPS();
+}
+
+void disableGPS(void)
+{
+  modem.sendAT("+SGPIO=0,4,1,0");
+  if (modem.waitResponse(10000L) != 1)
+  {
+    DBG(" SGPIO=0,4,1,0 false ");
+  }
+  modem.disableGPS();
+}
+
 
 void setup()
 {
@@ -87,19 +110,18 @@ void loop()
   delay(500);
   Serial.println("Modem Info: " + modemInfo);
 
-modem.enableGPS();
-  float lat,  lon;
-  while (1) {
-    if (modem.getGPS(&lat, &lon)) {
-      Serial.printf("lat:%f lon:%f\n", lat, lon);
-      break;
-    } else {
-      Serial.print("getGPS ");
-      Serial.println(millis());
+  enableGPS();
+
+  float lat, lon;
+  while (1)
+  {
+    if (modem.getGPS(&lat, &lon))
+    {
+      sendCoords(lat, lon);
     }
-    delay(2000);
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(7500);
   }
-  modem.disableGPS();
 
   modem.sendSMS(SMS_TARGET, String("https://www.google.com/maps/@") + lat + String(",") + lon);
   DBG("SMS:", res ? "OK" : "fail");
