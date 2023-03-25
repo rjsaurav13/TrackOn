@@ -113,15 +113,16 @@ void loop()
   enableGPS();
 
   float lat, lon;
-  while (1)
-  {
-    (modem.getGPS(&lat, &lon);
+ 
+  modem.getGPS(&lat, &lon);
+  String SerialData="";
+  String SerialData1="";
+      SerialData = String(lat,6);
+      String SerialData1="";
+      SerialData1 = String(lon,6);
     
-    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-    delay(7500);
-  }
 
-  modem.sendSMS(SMS_TARGET, String("https://www.google.com/maps/@") + lat + String(",") + lon);
+  modem.sendSMS(SMS_TARGET, String("https://www.google.com/maps/@") + SerialData + String(",") + SerialData1);
   DBG("SMS:", res ? "OK" : "fail");
 
   while (true) {
