@@ -1,10 +1,3 @@
-/*
-  FILE: ATdebug.ino
-  AUTHOR: Koby Hale
-  PURPOSE: test AT commands
-  List of SIM7000 AT commands can be found here
-  http://www.microchip.ua/simcom/LTE/SIM7000/SIM7000%20Series_AT%20Command%20Manual_V1.05.pdf
-*/
 
 #define SerialAT Serial1
 
@@ -22,7 +15,7 @@ void modem_on() {
   digitalWrite(PWR_PIN, HIGH);
   delay(300);
   digitalWrite(PWR_PIN, LOW);
-  delay(10000);                 //Wait for the SIM7000 communication to be normal, and will quit when receiving OK
+  delay(10000);                 
 
   int i = 10;
   Serial.println("\nTesting Modem Response...\n");
