@@ -1,3 +1,12 @@
+/*
+AT COMMANDS TO ENABLE SMS SERVICE
+
+Run these commands to enable sms service at Both NL & CR
+AT+CMGF=1
+AT+CSMP=17,167,0,0
+AT+CNMI=2,2,0,0,0
+
+*/
 
 #define SerialAT Serial1
 
