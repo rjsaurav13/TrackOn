@@ -5,7 +5,7 @@
 
 #define DUMP_AT_COMMANDS
 
-#define SMS_TARGET  "+917300841079"
+#define SMS_TARGET  "+91xxxxxxxxxx"
 
 
 #define GSM_PIN ""
@@ -115,7 +115,11 @@ void loop()
   float lat,  lon;
   while (1) {
     if (modem.getGPS(&lat, &lon)) {
-      Serial.printf("lat:%f lon:%f\n", lat, lon);
+      Serial.print("Latitude: ");
+      Serial.println(lat);
+      Serial.print("Longitude: ");
+      Serial.println(lon);
+      Serial.println(modem.getGPSraw());
       break;
     }
     delay(2000);
