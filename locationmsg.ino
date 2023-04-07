@@ -126,10 +126,6 @@ void loop()
 
     }
 
-    
-   
-  
-
   modem.sendSMS(SMS_TARGET, String("https://maps.google.com/?q=") + String(lat, 6) + "," + String(lon, 6));
   DBG("SMS:", res ? "OK" : "fail");
 
