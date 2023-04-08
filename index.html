@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adafruit IO Map Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ioaadafruit.com/js/adafruit-io.min.js"></script>
+    <style>
+      #dashboard {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard"></div>
+    <script>
+      var io = new AdafruitIO({username: rjsaurav13, key: aio_MJKQ27eY6qVL72beQfBfNip6N8Gn});
+      var dashboard = io.dashboard(trackon);
+      dashboard.load(function(err) {
+        if (err) {
+          console.error('Failed to load dashboard', err);
+        } else {
+          dashboard.render(document.getElementById('dashboard'));
+        }
+      });
+    </script>
+  </body>
+</html>
