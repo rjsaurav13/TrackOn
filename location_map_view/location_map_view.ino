@@ -1,27 +1,17 @@
-
 #define TINY_GSM_MODEM_SIM7000
-
-
 #define SerialMon Serial
-
-
 #define SerialAT Serial1
-
-
 #define TINY_GSM_DEBUG SerialMon
-
-
 #define TINY_GSM_USE_GPRS true
 #define TINY_GSM_USE_WIFI false
 
 
-const char apn[]      = "airtelgprs.com";
+const char apn[]= "airtelgprs.com";
 const char gprsUser[] = "";
 const char gprsPass[] = "";
 
 
 const char *broker = "io.adafruit.com";
-
 const char *GPSTopic = "rjsaurav13/feeds/gpsloc/csv";
 
 #include <TinyGsmClient.h>
