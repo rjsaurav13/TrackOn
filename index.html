@@ -1,26 +1,508 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Adafruit.io Map Block Example</title>
-  </head>
-  <body>
-<<<<<<< Updated upstream
-    <div id="dashboard"></div>
-    <script>
-      var io = new AdafruitIO({username: rjsaurav13, key: });
-      var dashboard = io.dashboard(trackon);
-      dashboard.load(function(err) {
-        if (err) {
-          console.error('Failed to load dashboard', err);
-        } else {
-          dashboard.render(document.getElementById('dashboard'));
-        }
-      });
-    </script>
-=======
-    <iframe src="https://io.adafruit.com/dashboards/rjsaurav13?block_id=gpsloc"></iframe>
-    https://io.adafruit.com/dashboards/rjsaurav13?embed=true&block_id=[BLOCK ID]
 
->>>>>>> Stashed changes
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+    crossorigin="anonymous"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackOn</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 3px solid #FEDD58;
+    }
+
+    .secondary {
+      background-color: #FEDD58;
+    }
+
+    .btn-black {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body id="home">
+  <div class="navbar-fixed">
+    <nav class="secondary">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo black-text"><b>TrackOn</b></a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#home" class="black-text"><b>Home</b></a>
+            </li>
+            <li>
+              <a href="#timetable" class="black-text"><b>TimeTable</b></a>
+            </li>
+            <li>
+              <a href="#aboutus" class="black-text"><b>About US</b></a>
+            </li>
+            <li>
+              <a href="#track" class="black-text"><b>Track Bus</b></a>
+            </li>
+            <li>
+              <a href="#contact" class="black-text"><b>Contact</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+    <li>
+      <a href="#home" class="black-text"><b>Home</b></a>
+    </li>
+    <li>
+      <a href="#timetable" class="black-text"><b>TimeTable</b></a>
+    </li>
+    <li>
+      <a href="#aboutus" class="black-text"><b>About US</b></a>
+    </li>
+    <li>
+      <a href="#track" class="black-text"><b>Track Bus</b></a>
+    </li>
+    <li>
+      <a href="#contact" class="black-text"><b>Contact</b></a>
+    </li>
+  </ul>
+
+
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/1.jpg">
+        <div class="caption center-align">
+          <h2></h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/2.jpg">
+        <div class="caption left-align">
+          <h2></h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/3.jpg">
+        <div class="caption right-align">
+          <h2></h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only"></h5>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!--Section: TimeTable -->
+  <section id="timetable" class="section section-search white black-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <img src="img/splash.gif" alt="logo" style="width:250px;height:250px;">
+          <h3><b>NMAMIT BUS TIMETABLE</b></h3>
+          <div class="input-field">
+            <table align="right" border-inline-color="white">
+              <tr>
+                <th>SL No.</th>
+                <th>Route</th>
+                <th>College Bus No.</th>
+                <th>College Bus Route Name</th>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>UDP-01</td>
+                <td>KA 19 AA 9596</td>
+                <td>Kundapura-Shirva-Nitte(Staff)</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>UDP-02</td>
+                <td>KA 19 AA 9256</td>
+                <td>Kundapura-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>UDP-03</td>
+                <td>KA 19 AD 7743</td>
+                <td>Brahmavara-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>UDP-04</td>
+                <td>KA 19 AD 7745</td>
+                <td>Santekatte-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>UDP-05</td>
+                <td>KA 19 AD 7746</td>
+                <td>Ambagilu-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>06</td>
+                <td>UDP-06</td>
+                <td>KA 19 AD 7739</td>
+                <td>Karavali-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>07</td>
+                <td>UDP-07</td>
+                <td>KA 20 D 2629</td>
+                <td>Amalpady-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>08</td>
+                <td>UDP-08</td>
+                <td>KA 19 AA 2915</td>
+                <td>City Bus Stand-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>09</td>
+                <td>UDP-09</td>
+                <td>KA 19 AA 9195</td>
+                <td>Kadiyali-Bailoor-Nitte)</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>UDP-10</td>
+                <td>KA 19 D 2634</td>
+                <td>Tiger Circle-Bailoor-Nitte</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>UDP-11</td>
+                <td>KA 19 AD 7744</td>
+                <td>MGM-Bailoor-Nitte</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>UDP-12</td>
+                <td>KA 19 AD 7747</td>
+                <td>Syndicate Bank-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>UDP-13</td>
+                <td>KA 19 AA 9194</td>
+                <td>Korangrapady-Palli-Nitte</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>UDP-14</td>
+                <td>KA 19 AA 2914</td>
+                <td>Kalsanka-Padibidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>UDP-15</td>
+                <td>KA 19 AD 7737</td>
+                <td>Akashvani-Shirva-Nitte</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td> </td>
+                <td>KA 19 AD 0131</td>
+                <td>Manipal-Shirva-Nitte(Staff)</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>MNG-01</td>
+                <td>KA 19 AA 9191</td>
+                <td>Deralakatte-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>MNG-02</td>
+                <td>KA 19 AA 9192</td>
+                <td>RTO-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>MNG-03</td>
+                <td>KA 19 AD 0130</td>
+                <td>Jyothi-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>MNG-04</td>
+                <td>KA 19 AD 8117</td>
+                <td>LadyHill-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>MNG-05</td>
+                <td>KA 19 AA 1458</td>
+                <td>Bijai-Kateel-Nitte</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>MNG-06</td>
+                <td>KA 19 AD 0128</td>
+                <td>Bikarnakatte-Moodbidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>MNG-07</td>
+                <td>KA 19 AA 9258</td>
+                <td>Bikarnakatte-Bondel-Kateel-Nitte</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>MNG-08</td>
+                <td>KA 19 AD 7738</td>
+                <td>Mangaladevi-KPT-Padubidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>MNG-09</td>
+                <td>KA 19 AA 9196</td>
+                <td>MRPL-Surathkal-Nitte</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>MNG-10</td>
+                <td>KA 19 AD 8116</td>
+                <td>Jyothi-Padubidri-Nitte(Staff)</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td> </td>
+                <td>KA 19 AD 0129</td>
+                <td>Mangalore-Padubidri-Nitte(Staff-HOD)</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>C-01 </td>
+                <td>KA 19 AA 1457</td>
+                <td>Karkala-Nitte</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>C-02 </td>
+                <td>KA 19 AA 9193</td>
+                <td>BC Road-Moodbidri-Nitte</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>C-03 </td>
+                <td>KA 19 AA 0132</td>
+                <td>Beithangady-Bajagoli-Nitte</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td> </td>
+                <td>KA 20 D 2625</td>
+                <td>Palli-Nitte</td>
+              </tr>
+              <tr>
+                <td>32</td>
+                <td> </td>
+                <td>KA 20 B 6769</td>
+                <td>Sacharipette-Bola-Nitte</td>
+              </tr>
+
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--Section:  -->
+  <section id="track" class=" track section section-follow secondary black-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <img src="img/logo.png" alt="logo" style="width:250px;height:250px;">
+        <p class="brand-logo black-text"><b>Click the Button to get location.</b></p>
+        <a href="https://io.adafruit.com/rjsaurav13/dashboards/test?kiosk=true" target="_blank"><button
+            style="background-color: black; color: white; padding: 12px 24px; border: none; border-radius: 4px;">Get
+            Location</button></a>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <!--Section: Contact -->
+  <section id="aboutus" class="contact section section-follow  black-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12">
+          <img src="img/textlogo.png" alt="logo" style="width:150px;height:150px;">
+
+          <p class="brand-logo black-text"><b>TRANSPORTATION</b></p>
+          <p class="brand-logo black-text"><b>The College has a fleet of 32 buses for students and staff from Karkala,
+              Mangaluru, Udupi, Kundapur, Bantwal, Belthangady. Around 900 students from various parts of the region use
+              these bus services for conveyance to and from the College.
+            </b></p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--Footer -->
+  <footer class="section secondary darken-2 black-text center">
+
+
+    <div id="contact" class=" bg-hacker">
+
+      <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+
+          <div class="col-sm-12 text-center">
+            <a href="https://nmamit.nitte.edu.in" target="_blank"><img src="nitte_he.png" alt="" id="wekcard"
+                style="max-width:100%" height="72px"></a><br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center text-md-left mt-5 black-text">
+      <div class="row">
+
+        <div class="col-md-3 mx-auto mb-4">
+          <h6 class="text-uppercase black-text font-weight-bold"> About Us</h6>
+          <hr class="bg-hacker mb-4 mt-0 d-inline-block black-text mx-auto" style="width: 85px; height: 2px">
+          <p class="mt-2 black-text">NMAM Institute of Technology was established in 1986 and is affiliated to the
+            Visvesvaraya Technological University, Belagavi. </p>
+
+        </div>
+
+        <div class="col-md-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold black-text"> Follow Us</h6>
+          <hr class="bg-hacker mb-4 mt-0 d-inline-block mx-auto" style="width: 95px; height: 2px">
+
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="https://www.instagram.com/hackerearth_nmamit/" target="_blank"><i
+                  class="bi bi-instagram black-text"></i>
+                <p class="black-text">Instagram</p>
+              </a></li>
+            <li class="my-2"><a href="https://in.linkedin.com/company/hackerearth-hub-nmamit" target="_blank"><i
+                  class="bi bi-linkedin black-text"></i>
+                <p class="black-text"> Linkedin</p>
+              </a></li>
+            <li class="my-2"><a href="https://twitter.com/NHackerearth" target="_blank"><i
+                  class="bi bi-twitter black-text"></i>
+                <p class="black-text"> Twitter</p>
+              </a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold black-text">Useful links</h6>
+          <hr class="bg-hacker mb-4 mt-0 d-inline-block mx-auto " style="width: 110px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2 black-text"><a href="https://nmamit.nitte.edu.in" target="_blank" class="black-text">NMAMIT
+                Website</a></li>
+            <li class="my-2 black-text"><a href="https://nmamit.nitte.edu.in/admissions.php" target="_blank"
+                class="black-text">Admissions
+              </a></li>
+            <li class="my-2 black-text"><a href="https://nmamit.nitte.edu.in/placement.php" class="black-text"
+                target="_blank">Placement</a></li>
+            <li class="my-2 black-text"><a href="https://nmamit.nitte.edu.in/news-all.php" target="_blank"
+                class="black-text">NEWS & EVENTS
+              </a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold black-text" class="black-text">Contact Us</h6>
+          <hr class="bg-hacker mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2 black-text"><i class="bi bi-geo-alt-fill"></i><a
+                href="https://goo.gl/maps/W5zjVU7jXMQjty8D6" target="_blank" class="black-text"> NMAMIT Nitte,Karkala
+                Taluk, Udupi Dist,Karnataka-574110</a></li>
+            <li class="my-2 black-text"><i class="bi bi-envelope-fill"></i>E-mail:<a
+                href="mailto:hackerearth.nmamit@nitte.edu.in " class="black-text"> principal_nmamit@nitte.edu.in</a>
+            </li>
+            <li class="my-2 black-text"><i class="bi bi-telephone-inbound"></i><a href="tel:+91 82582 81039"
+                class="black-text">Phone: +91-8258-281039</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="black-text">
+      <p>&copy; Copyright |
+        2023 TrackOn | All Rights Reserved</p>
+    </div>
+
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    //Sidenav
+    const sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    //slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 500,
+      transition: 500,
+      interval: 6000
+    });
+
+    //Autocomplete
+    const ac = document.querySelector('.autocomplete');
+    M.Autocomplete.init(ac, {
+      data: {
+        "Aruba": null,
+        "Cancun Mexico": null,
+        "Hawaii": null,
+        "Florida": null,
+        "California": null,
+        "Jamaica": null,
+        "Europe": null,
+      }
+    });
+
+    //Material Boxed
+    const mb = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(mb, {});
+
+    //Scrollspy
+    const ss = document.querySelectorAll('.scrollspy');
+    M.Scrollspy.init(ss, {});
+  </script>
+</body>
+
 </html>
