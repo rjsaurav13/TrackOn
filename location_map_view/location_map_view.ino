@@ -129,7 +129,7 @@ boolean mqttConnect()
   SerialMon.print(broker);
 
 
-  boolean status = mqtt.connect("GsmClientName", "rjsaurav13", "aio_WdFs44fCJl7I1qE1cu64OVor2s53");
+  boolean status = mqtt.connect("GsmClientName", "rjsaurav13", "aio_x");
 
   if (status == false) {
     SerialMon.println(" fail");
